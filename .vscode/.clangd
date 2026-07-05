@@ -1,0 +1,16 @@
+# Clangd 配置文件
+---
+CompileFlags:
+  Add:
+    - "-I${workspaceFolder}/install/include"
+    - "-I${workspaceFolder}/build"
+    - "--std=c++17"
+
+InlayHints:
+  Enabled: true
+  ParameterHints: true
+  TypeHints: true
+  DeducedTypes: true
+
+Hover:
+  ShowAKA: true

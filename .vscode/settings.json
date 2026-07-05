@@ -1,0 +1,28 @@
+{
+    "cmake.configureArgs": [
+        "-DMLIR_DIR=/home/lqy/mlir-tutorial/install/lib/cmake/mlir",
+        "-DLLVM_DIR=/home/lqy/mlir-tutorial/install/lib/cmake/llvm"
+    ],
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.path": "clangd",
+    "clangd.arguments": [
+        "--background-index",
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "-j=16",
+        "--clang-tidy",
+        "--all-scopes-completion",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu",
+        "--pch-storage=memory",
+        "--enable-config",
+        "--query-driver=/usr/bin/clang++"
+    ],
+    
+    "mlir.server_path": "/home/lqy/mlir-tutorial/install/bin/mlir-lsp-server",
+    "mlir.tablegen_server_path": "/home/lqy/mlir-tutorial/install/bin/tblgen-lsp-server",
+    
+    // 这才是 MLIR 官方插件真正存在的配置项！用来指定数据库的位置
+    "mlir.tablegen_compilation_databases": [
+        "/home/lqy/mlir-tutorial/build/tablegen_compile_commands.yml"
+    ]
+}

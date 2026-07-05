@@ -1,3 +1,5 @@
-/.cache
-/build
-/.vscode
+llvm-project/
+build/
+install/
+.vscode/
+.clangd/
